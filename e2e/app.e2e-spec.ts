@@ -15,6 +15,7 @@ describe('ng-osc-tkc2018s-demo App', () => {
         browser.manage().window().setSize(1920, 1400);
         browser.sleep(2000);
         expect(page.getParagraphText()).toEqual('Welcome to app!');
+        browser.ignoreSynchronization = true;
       }
       browser.sleep(2000);
       browser.get('http://ashiras.xyz/');
