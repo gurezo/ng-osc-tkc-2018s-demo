@@ -8,19 +8,21 @@ describe('ng-osc-tkc2018s-demo App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    browser.manage().window().setSize(1920, 1080);
-    browser.sleep(10000);
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
-    for (let i = 0; i < 1000; i++ ) {
-      browser.sleep(10000);
+  for (let i = 0; i < 100; i++) {
+    it('should display welcome message', () => {
+      if (i === 0) {
+        page.navigateTo();
+        browser.manage().window().setSize(1920, 1400);
+        browser.sleep(2000);
+        expect(page.getParagraphText()).toEqual('Welcome to app!');
+      }
+      browser.sleep(2000);
       browser.get('http://ashiras.xyz/');
-      browser.sleep(10000);
+      browser.sleep(2000);
       browser.get('https://angular.io/');
-      browser.sleep(10000);
+      browser.sleep(2000);
       browser.get('https://www.ospn.jp/osc2018-spring/');
-      browser.sleep(10000);
+      browser.sleep(2000);
+    });
     }
-  });
 });
