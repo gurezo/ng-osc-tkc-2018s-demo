@@ -11,7 +11,7 @@ describe('ng-osc-tkc2018s-demo App', () => {
   browser.manage().window().setSize(1920, 1080);
   browser.ignoreSynchronization = true;
   let cnt = 0;
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 1000; i++) {
     it('should display ashiras HP', () => {
       browser.get('http://ashiras.xyz/');
       browser.waitForAngular();
